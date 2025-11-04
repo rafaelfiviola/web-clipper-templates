@@ -1,4 +1,4 @@
-{
+`{
 	"schemaVersion": "0.1.0",
 	"name": "GitHub Repository",
 	"behavior": "create",
@@ -43,7 +43,12 @@
 			"name": "created",
 			"value": "{{date}}",
 			"type": "date"
-		}
+		},
+		{
+ 		    "name": "license",
+  			"value": "{{selector:a[href*='LICENSE']|first}}",
+  			"type": "text"
+		},
 	],
 	"triggers": [
 		"https://github.com/"
